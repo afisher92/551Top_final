@@ -1,0 +1,10 @@
+// first 5 entries are LP,B1,B2,B3,HP
+// 8th entry is volume, other are not used
+@0 000
+@1 800
+@2 000
+@3 000
+@4 000
+@5 000
+@6 000
+@7 fff
