@@ -75,7 +75,7 @@ end
 assign smpl_out 	= (sequencing) ? data_out : 16'h0000;
 
 /* ------ Control for read/write pointers and empty/full registers -------------------------------- */
-assign end_ptr	= old_ptr + 10'd1020;
+assign end_ptr	= old_ptr + 10'd1021;
 always @(posedge clk, negedge rst_n) 
 	if(!rst_n)
 		read <= 1'b0;

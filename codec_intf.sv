@@ -64,8 +64,10 @@ always @(posedge clk, negedge rst_n) begin
 end
 
 /*-- Instantiate Out Signals to Digital Core --*/
-always @(posedge clk) begin
-	if(LRCLK_fall)
+always @(posedge clk, negedge rst_n) begin
+	if(!rst_n)
+		lft_in <= 16'h0000;
+	else if(LRCLK_fall)
 		lft_in <= inshift_reg;
 end
 
