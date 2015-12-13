@@ -19,6 +19,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	dualPort1536x16
 
+} {} {}} C:/Users/Nate/Desktop/551Top_final/HiFQueues.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/HiFQueues.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module HiFQueues
+
+Top level modules:
+	HiFQueues
+
 } {} {}} C:/Users/Nate/Desktop/551Top_final/HPfilt.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/HPfilt.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module HPfilt
@@ -82,13 +89,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	CS4272
 
-} {} {}} C:/Users/Nate/Desktop/551Top_final/EQ_Engine.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/EQ_Engine.sv
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module EQ_Engine
-
-Top level modules:
-	EQ_Engine
-
 } {} {}} C:/Users/Nate/Desktop/551Top_final/LPfilt.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/LPfilt.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module LPfilt
@@ -117,6 +117,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	ROM_B1
 
+} {} {}} C:/Users/Nate/Desktop/551Top_final/codec_intf.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/codec_intf.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module codec_intf
+
+Top level modules:
+	codec_intf
+
 } {} {}} C:/Users/Nate/Desktop/551Top_final/ADC128S.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/ADC128S.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module ADC128S
@@ -130,13 +137,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	ROM_B2
-
-} {} {}} C:/Users/Nate/Desktop/551Top_final/codec_intf.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/codec_intf.sv
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module codec_intf
-
-Top level modules:
-	codec_intf
 
 } {} {}} C:/Users/Nate/Desktop/551Top_final/ROM_B3.v {1 {vlog -work work -stats=none C:/Users/Nate/Desktop/551Top_final/ROM_B3.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015

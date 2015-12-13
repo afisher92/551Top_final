@@ -10,7 +10,7 @@ output LRCLK_rise, set_valid;
 
 //Designate any registers or wires//
 reg signed [15:0] inshift_reg; 								 //Input buffer, Manage SDIN from CODEC and lft/rht_in
-reg [15:0] outshift_reg, lft_buffin, rht_buffin; 		 //Output double buffer. Manage SDOUT to CODEC and lft/rht_out
+reg signed [15:0] outshift_reg, lft_buffin, rht_buffin; 		 //Output double buffer. Manage SDOUT to CODEC and lft/rht_out
 reg [10:0] cnt;											 //Counter that iterates with clk
 reg LRCLK, SCLK, MCLK, RSTn;							 //Control clocks
 

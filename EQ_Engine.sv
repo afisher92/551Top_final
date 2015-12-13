@@ -82,8 +82,8 @@ assign lft_sum = LLP_scaled + LB1_scaled + LB2_scaled + LB3_scaled + LHP_scaled;
 assign rht_sum = RLP_scaled + RB1_scaled + RB2_scaled + RB3_scaled + RHP_scaled;
 
 /* Scale by volume */
-assign lft_out = volume * lft_sum;
-assign rht_out = volume * rht_sum;
+assign lft_out = (sequencing) ? volume * lft_sum : 16'h0000;
+assign rht_out = (sequencing) ? volume * rht_sum : 16'h0000;
 
 /* sequencing output logic */
 assign sequencing = (LLF_seq & LHF_seq & RLF_seq & RHF_seq);
