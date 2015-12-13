@@ -9,7 +9,7 @@ output LRCLK, SCLK, MCLK, RSTn, SDin;
 output LRCLK_rise, set_valid;
 
 //Designate any registers or wires//
-reg [15:0] inshift_reg; 								 //Input buffer, Manage SDIN from CODEC and lft/rht_in
+reg signed [15:0] inshift_reg; 								 //Input buffer, Manage SDIN from CODEC and lft/rht_in
 reg [15:0] outshift_reg, lft_buffin, rht_buffin; 		 //Output double buffer. Manage SDOUT to CODEC and lft/rht_out
 reg [10:0] cnt;											 //Counter that iterates with clk
 reg LRCLK, SCLK, MCLK, RSTn;							 //Control clocks
@@ -69,7 +69,10 @@ always @(posedge clk) begin
 		lft_in <= inshift_reg;
 end
 
-assign rht_in = inshift_reg;
+always @(posedge clk) begin	
+	if(LRCLK_rise)
+		rht_in <= inshift_reg;
+end
 //Don't need buffers since parallel data only needs to be valid while valid is asserted
 
 /*-- Implement master counter --*/
