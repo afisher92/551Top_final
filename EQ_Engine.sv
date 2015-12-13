@@ -39,13 +39,13 @@ reg signed [15:0] lft_sum, rht_sum;
 LowFQueues ilft_LFQ(.clk(clk), .rst_n(rst_n), .new_smpl(lft_in), .valid_rise(valid_rise), 
 					.smpl_out(lft_LF), .sequencing(LLF_seq), .valid_fall(valid_fall));
 HiFQueues ilft_HFQ(.clk(clk), .rst_n(rst_n), .new_smpl(lft_in), .valid_rise(valid_rise), 
-					.smpl_out(lft_HF), .sequencing(LHF_seq), .valid_fall(valid_fall));
+					.smpl_out(lft_HF), .sequencing(LHF_seq));
 					
 /* Instantiate the low and high frequency queues for right signal */
 LowFQueues irht_LFQ(.clk(clk), .rst_n(rst_n), .new_smpl(rht_in), .valid_rise(valid_rise), 
 					.smpl_out(rht_LF), .sequencing(RLF_seq), .valid_fall(valid_fall));
 HiFQueues irht_HFQ(.clk(clk), .rst_n(rst_n), .new_smpl(rht_in), .valid_rise(valid_rise), 
-					.smpl_out(rht_HF), .sequencing(RHF_seq), .valid_fall(valid_fall));
+					.smpl_out(rht_HF), .sequencing(RHF_seq));
 					
 /* Instantiate the filters */
 LPfilt iLP(.rght_in(rht_LF), .lft_in(lft_LF), .rst_n(rst_n), .rght_out(LP_rhtOut), 

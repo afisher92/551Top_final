@@ -47,6 +47,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	button_rise_edge
 
+} {} {}} C:/Users/Nate/Desktop/551Top_final/LowFQueues.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/LowFQueues.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module LowFQueues
+
+Top level modules:
+	LowFQueues
+
 } {} {}} C:/Users/Nate/Desktop/551Top_final/SPI_ADC128S.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/SPI_ADC128S.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module SPI_ADC128S
