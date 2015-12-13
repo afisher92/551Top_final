@@ -17,42 +17,42 @@ A2D_intf A2D(.clk(clk), .rst_n(rst_n), .chnnl(chnnl), .strt_cnv(strt_cnv), .MISO
 
 //Potentiometer outputs
 always @(posedge clk) begin
- if(cnt==3'b000 & cnv_cmplt)
+ if(chnnl==3'b000 & cnv_cmplt)
   POT_LP <= res;
  else
   POT_LP <= POT_LP;
 end
 
 always @(posedge clk) begin
- if(cnt==3'b001 & cnv_cmplt)
+ if(chnnl==3'b001 & cnv_cmplt)
   POT_B1 <= res;
  else
   POT_B1 <= POT_B1;
 end
 
 always @(posedge clk) begin
- if(cnt==3'b010 & cnv_cmplt)
+ if(chnnl==3'b010 & cnv_cmplt)
   POT_B2 <= res;
  else
   POT_B2 <= POT_B2;
 end
 
 always @(posedge clk) begin
- if(cnt==3'b011 & cnv_cmplt)
+ if(chnnl==3'b011 & cnv_cmplt)
   POT_B3 <= res;
  else
   POT_B3 <= POT_B3;
 end
 
 always @(posedge clk) begin
- if(cnt==3'b100 & cnv_cmplt)
+ if(chnnl==3'b100 & cnv_cmplt)
   POT_HP <= res;
  else
   POT_HP <= POT_HP;
 end
 
 always @(posedge clk) begin
- if(cnt==3'b111 & cnv_cmplt)
+ if(chnnl==3'b111 & cnv_cmplt)
   VOLUME <= res;
  else
   VOLUME <= VOLUME;
@@ -79,6 +79,7 @@ case(state)
  IDLE:  begin
 strt_cnv = 1'b1;
 nxtstate = CNV;
+;
 end
 
  CNV: if(!cnv_cmplt) begin
@@ -88,7 +89,7 @@ strt_cnv = 1'b0;
 nxtstate = IDLE;
 chnnl = cnt;
 if(cnt == 3'b100)
-  cnt <= 3'b110; 
+  cnt = 3'b110; 
 else
 cnt = cnt + 1;
 
