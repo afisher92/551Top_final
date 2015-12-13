@@ -35,9 +35,6 @@ wire signed [15:0] RLP_scaled, RB1_scaled, RB2_scaled, RB3_scaled, RHP_scaled;
 // Define summed signals
 reg signed [15:0] lft_sum, rht_sum;
 
-// Define colume scaled signals
-reg signed [31:0] Lvol_buff, Rvol_buff;
-
 /* Instantiate the low and high frequency queues for left signal */
 LowFQueues ilft_LFQ(.clk(clk), .rst_n(rst_n), .new_smpl(lft_in), .valid_rise(valid_rise), 
 					.smpl_out(lft_LF), .sequencing(LLF_seq), .valid_fall(valid_fall));
@@ -85,10 +82,8 @@ assign lft_sum = LLP_scaled + LB1_scaled + LB2_scaled + LB3_scaled + LHP_scaled;
 assign rht_sum = RLP_scaled + RB1_scaled + RB2_scaled + RB3_scaled + RHP_scaled;
 
 /* Scale by volume */
-assign Lvol_buff = (sequencing) ? volume * lft_sum : 16'h0000;
-assign Rvol_buff = (sequencing) ? volume * rht_sum : 16'h0000;
-assign lft_out = (sequencing) ? Lvol_buff[31:16] : 16'h0000;
-assign rht_out = (sequencing) ? Rvol_buff[31:16] : 16'h0000;
+assign lft_out= (sequencing) ? volume * lft_sum : 16'h0000;
+assign rht_out = (sequencing) ? volume * rht_sum : 16'h0000;
 
 /* sequencing output logic */
 assign sequencing = (LLF_seq & LHF_seq & RLF_seq & RHF_seq);

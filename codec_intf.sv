@@ -24,7 +24,7 @@ always @(posedge clk, negedge rst_n) begin
 		rht_buffin <= 16'h0000;
 		lft_buffin <= 16'h0000;
 	end
-	else if (set_valid) begin
+	else if (valid) begin
 		rht_buffin <= rht_out;
 		lft_buffin <= lft_out;
 	end

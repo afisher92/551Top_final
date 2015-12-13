@@ -180,6 +180,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	B2filt
 
+} {} {}} C:/Users/Nate/Desktop/551Top_final/bandScale.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/bandScale.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module bandScale
+
+Top level modules:
+	bandScale
+
 } {} {}} C:/Users/Nate/Desktop/551Top_final/LED.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/LED.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module LED
