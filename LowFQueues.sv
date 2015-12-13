@@ -12,8 +12,8 @@ module LowFQueues (
 	Pointers designated as 'old' signify where the array is going to read from */
 
 // Declare pointers for high band and low band queues
-reg [9:0] 		new_ptr, old_ptr, next_new;
-reg [9:0]		read_ptr, next_read;
+reg [9:0] 		new_ptr, old_ptr;
+reg [9:0]		read_ptr;
 reg [9:0]		end_ptr;
 
 // Declare status registers for high and low queues
@@ -56,7 +56,7 @@ always @(posedge clk, negedge rst_n) begin
 		read_ptr <= 10'h000;
 	else if(read_ptr == end_ptr)
 		read_ptr <= old_ptr;
-	else if(read)
+	else if(sequencing)
 		read_ptr <= read_ptr + 1;
 	else
 		read_ptr <= old_ptr;
@@ -66,12 +66,12 @@ end
 always @(posedge clk, negedge rst_n) begin
 	if(!rst_n)
 		sequencing <= 1'b0;
-	else if(wrt_en & read)
+	else if(wrt_en && read)
 		sequencing <= 1'b1;
 	else if(read_ptr == end_ptr)
 		sequencing <= 1'b0;
 end
-		
+
 assign smpl_out 	= (sequencing) ? data_out : 16'h0000;
 
 /* ------ Control for read/write pointers and empty/full registers -------------------------------- */
@@ -87,7 +87,7 @@ assign wrt_en = (wrt_ff & valid_rise);
 
 always @(posedge clk, negedge rst_n) begin
 	if(!rst_n)
-		wrt_ff <= 1'b0;
+		wrt_ff <= 1'b1;
 	else if(valid_rise)
 		wrt_ff <= ~wrt_ff;
 end
