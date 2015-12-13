@@ -69,10 +69,7 @@ always_ff @(posedge clk, negedge rst_n)
 always_ff @(posedge clk, negedge rst_n)
  if(!rst_n)
   cnt <= 3'b000;
- else if(cnt == 3'b100)
-  cnt <= 3'b111;  //resets cnt when cnt = 111
- else if(cnv_cmplt)
-  cnt <= cnt + 1;
+
 
 //Implement state machine
 always @(*) begin
@@ -89,6 +86,10 @@ nxtstate = CNV;
 end else begin
 strt_cnv = 1'b0;
 nxtstate = IDLE;
+if(cnt == 3'b100)
+  cnt <= 3'b110; 
+else
+cnt = cnt + 1;
 
 end
 endcase
