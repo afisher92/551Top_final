@@ -1,9 +1,9 @@
-module slide_intf(clk, cnv_cmplt, rst_n, cnt, strt_cnv, res, POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME);
+module slide_intf(clk, cnv_cmplt, rst_n, cnt, chnnl, strt_cnv, res, POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME);
 
 input clk, rst_n, cnv_cmplt;
 input [11:0] res;
 
-output reg [2:0]cnt;
+output reg [2:0]cnt, chnnl;
 output reg strt_cnv;
 output reg [11:0]POT_LP, POT_B1, POT_B2, POT_B3, POT_HP, VOLUME;
 
@@ -13,7 +13,7 @@ localparam IDLE = 1'b0;
 localparam CNV = 1'b1;
 
 //Instantiate A2D_intf
-A2D_intf A2D(.clk(clk), .rst_n(rst_n), .chnnl(cnt), .strt_cnv(strt_cnv), .MISO(MISO), .cnv_cmplt(cnv_cmplt), .res(res), .A2D_SS_n(A2D_SS_n), .SCLK(SCLK), .MOSI(MOSI));
+A2D_intf A2D(.clk(clk), .rst_n(rst_n), .chnnl(chnnl), .strt_cnv(strt_cnv), .MISO(MISO), .cnv_cmplt(cnv_cmplt), .res(res), .A2D_SS_n(A2D_SS_n), .SCLK(SCLK), .MOSI(MOSI));
 
 //Potentiometer outputs
 always @(posedge clk) begin
@@ -86,6 +86,7 @@ nxtstate = CNV;
 end else begin
 strt_cnv = 1'b0;
 nxtstate = IDLE;
+chnnl = cnt;
 if(cnt == 3'b100)
   cnt <= 3'b110; 
 else
