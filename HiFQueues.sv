@@ -30,36 +30,53 @@ reg [10:0]		read_start;
 dualPort1536x16 i536Port(.clk(clk),.we(valid_rise),.waddr(new_ptr),.raddr(read_ptr),.wdata(new_smpl),.rdata(data_out));
 
 /* ------ Always Block to Update States ------------------------------------------------------------ */
-always @(posedge valid_rise, negedge rst_n) begin 
-	if(!rst_n) begin
-		// Reset Pointers
-		new_ptr  <= 11'h1FD;
-		old_ptr  <= 11'h000;
-	end else begin
-		// Set Pointers
-		new_ptr	 <= next_new;
-		old_ptr	 <= next_old;
-	end
+// new_ptr manages the next available address to be written to
+// Is updated at every valid signal
+always @(posedge clk, negedge rst_n) begin 
+	if(!rst_n)
+		new_ptr  <= 11'h000;
+	else if(valid_rise)
+		new_ptr	 <= new_ptr + 1;
+	else if(valid_rise & new_ptr == 1535)
+		new_ptr <= 11'h000;
 end
 
+// old_ptr holds the first address in the queue. 
+always @(posedge clk, negedge rst_n) begin 
+	if(!rst_n)
+		old_ptr  <= 11'h000;
+	else if(old_ptr == 1535)
+		old_ptr <= 11'h000;
+	else if(read_cnt == 11'h3FC)
+		old_ptr	 <= old_ptr + 1;
+end
+
+// read_ptr points to the address in memory that will be read
+// This cycles through 1021 memory locations as quickly as possible
 always @(posedge clk, negedge rst_n)
 	if(!rst_n)
-		read_ptr <= 11'h1FD;
+		read_ptr <= 11'h000;
+	else if(read_ptr >= 11'h5FF)
+		read_ptr <= 11'h0000;
 	else if(sequencing)
-		read_ptr <= next_read;
+		read_ptr <= read_ptr + 1;
 	else
 		read_ptr <= read_start + 1'b1;
 
-always @(posedge sequencing, negedge rst_n)
+// read_start keeps track of the most recent starting location of read_ptr
+// Makes it easy to track the next starting location independent of old_ptr
+// Neccessary since end_ptr+1020 will not work because mem size is not a power of 2
+always @(posedge clk, negedge rst_n)
 	if(!rst_n)
 		read_start <= 11'h1FD;
 	else if(read_start == 11'h5FE)
 		read_start <= 11'h000;
-	else 
+	else if(sequencing)
 		read_start <= read_ptr;
 	
-
-//Update Sequencing
+// sequencing is valid when there have been 1531 samples written 
+// and a new valid signal has come in. It goes back to 0 when 
+// 1021 samples have been read
 always @(posedge clk, negedge rst_n)
 	if(!rst_n)
 		sequencing <= 1'b0;
@@ -70,43 +87,26 @@ always @(posedge clk, negedge rst_n)
 		
 assign smpl_out   = (sequencing) ? data_out : 16'h0000;
 
-/* ------ Manage pointers in high frequency queue ------------------------------------------------- */
-always @(posedge clk, negedge rst_n)
-	if(!rst_n)
-		next_new <= 11'h1FE;
-	else if(valid_rise & next_new == 1535)
-		next_new <= 11'h000;
-	else if(wrt_en)
-		next_new <= new_ptr + 1;
-
-always @(posedge clk, negedge rst_n) begin
-	if(!rst_n)
-		next_old <= 11'h000;
-	else if(old_ptr == 1535)
-		next_old <= 11'h000;
-	else if (sequencing)
-		next_old <= old_ptr + 1;
-end
-
-assign next_read = (read_ptr >= 11'h5FF) ? 11'h000 : read_ptr + 1;
-
 /* ------ Manage Queue Counters ------------------------------------------------------------------- */
-// High Frequency Q Counter
-always @(posedge valid_rise, negedge rst_n) 
+// cnt keeps track of the initial 1531 samples written to memory.
+// Once set, it stays high until reset
+always @(posedge clk, negedge rst_n) 
 	if (!rst_n)
 		cnt <= 11'h000;
 	else if(cnt != 1531 & wrt_en) begin
 		cnt <= cnt + 1;
 	end
 	
-//Manage when to write first signal
+// Need a continuous write signal to manage counters and act as a state flag
+// Is high as soon as first valid signal is input 
 always @(posedge clk, negedge rst_n)
 	if(!rst_n)
 		wrt_en <= 1'b0;
 	else if(valid_fall)
 		wrt_en <= 1'b1;	
 		
-// Manage read counter
+// Keeps track of how many samples have been read. Equivalent to end_ptr function
+// found in the LowFQueues
 always @(posedge clk, negedge rst_n) 
 	if(!rst_n)
 		read_cnt <= 11'h000;
