@@ -83,7 +83,7 @@ always @(posedge clk, negedge rst_n)
 		read <= 1'b1;	
 
 /* ------ Manage Queue Counters ------------------------------------------------------------------- */
-assign wrt_en = (wrt_ff & valid_rise);
+assign wrt_en = (wrt_ff && valid_rise);
 
 always @(posedge clk, negedge rst_n) begin
 	if(!rst_n)

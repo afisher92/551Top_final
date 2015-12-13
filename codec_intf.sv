@@ -69,7 +69,10 @@ always @(posedge clk) begin
 		lft_in <= inshift_reg;
 end
 
-assign rht_in = inshift_reg;
+always @(posedge clk) begin
+	if(LRCLK_rise)
+		rht_in <= inshift_reg;
+end
 //Don't need buffers since parallel data only needs to be valid while valid is asserted
 
 /*-- Implement master counter --*/
