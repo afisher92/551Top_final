@@ -25,7 +25,7 @@ reg				wrt_en;		// Keeps track of every other valid signal
 reg				wrt_ff;
 
 // Define buffer for output data
-reg [15:0] 	data_out;
+reg signed [15:0] 	data_out;
 
 /* ------ Instantiate the dual port modules -------------------------------------------------------- */
 dualPort1024x16 i1024Port(.clk(clk),.we(wrt_en),.waddr(new_ptr),.raddr(read_ptr),.wdata(new_smpl),.rdata(data_out));

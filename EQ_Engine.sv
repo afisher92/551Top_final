@@ -18,22 +18,25 @@ module EQ_Engine (
 );
 
 // Define outputs of the low and high pass queeues
-wire [15:0] lft_LF, lft_HF, rht_LF, rht_HF;
+wire signed [15:0] lft_LF, lft_HF, rht_LF, rht_HF;
 wire LLF_seq, LHF_seq, RLF_seq, RHF_seq;	// queue sequencing status register
 
 // Define signal outputs of the filters
-wire [15:0] LP_rhtOut, LP_lftOut;	// Low pass filter outputs
-wire [15:0] B1_rhtOut, B1_lftOut;	// Low Band pass filter outputs
-wire [15:0] B2_rhtOut, B2_lftOut;	// Mid Band pass filter outputs
-wire [15:0] B3_rhtOut, B3_lftOut;	// High Band pass filter outputs
-wire [15:0] HP_rhtOut, HP_lftOut;	// High pass filter outputs
+wire signed [15:0] LP_rhtOut, LP_lftOut;	// Low pass filter outputs
+wire signed [15:0] B1_rhtOut, B1_lftOut;	// Low Band pass filter outputs
+wire signed [15:0] B2_rhtOut, B2_lftOut;	// Mid Band pass filter outputs
+wire signed [15:0] B3_rhtOut, B3_lftOut;	// High Band pass filter outputs
+wire signed [15:0] HP_rhtOut, HP_lftOut;	// High pass filter outputs
 
 // Define scaled signal outputs from the band scaling 
-wire [15:0] LLP_scaled, LB1_scaled, LB2_scaled, LB3_scaled, LHP_scaled;
-wire [15:0] RLP_scaled, RB1_scaled, RB2_scaled, RB3_scaled, RHP_scaled;
+wire signed [15:0] LLP_scaled, LB1_scaled, LB2_scaled, LB3_scaled, LHP_scaled;
+wire signed [15:0] RLP_scaled, RB1_scaled, RB2_scaled, RB3_scaled, RHP_scaled;
 
 // Define summed signals
 reg signed [15:0] lft_sum, rht_sum;
+
+// Define colume scaled signals
+reg signed [31:0] Lvol_buff, Rvol_buff;
 
 /* Instantiate the low and high frequency queues for left signal */
 LowFQueues ilft_LFQ(.clk(clk), .rst_n(rst_n), .new_smpl(lft_in), .valid_rise(valid_rise), 
@@ -82,8 +85,10 @@ assign lft_sum = LLP_scaled + LB1_scaled + LB2_scaled + LB3_scaled + LHP_scaled;
 assign rht_sum = RLP_scaled + RB1_scaled + RB2_scaled + RB3_scaled + RHP_scaled;
 
 /* Scale by volume */
-assign lft_out = (sequencing) ? volume * lft_sum : 16'h0000;
-assign rht_out = (sequencing) ? volume * rht_sum : 16'h0000;
+assign Lvol_buff = (sequencing) ? volume * lft_sum : 16'h0000;
+assign Rvol_buff = (sequencing) ? volume * rht_sum : 16'h0000;
+assign lft_out = (sequencing) ? Lvol_buff[31:16] : 16'h0000;
+assign rht_out = (sequencing) ? Rvol_buff[31:16] : 16'h0000;
 
 /* sequencing output logic */
 assign sequencing = (LLF_seq & LHF_seq & RLF_seq & RHF_seq);

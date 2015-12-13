@@ -16,7 +16,7 @@ reg [10:0]		read_ptr;
 /* Define high frequency registers */
 reg [10:0]		cnt;				//Counts how many addresses have samples writen to them
 reg				wrt_en;
-reg [15:0]		data_out;
+reg signed [15:0]		data_out;
 
 /* Define Additional Counters */
 reg [10:0]		read_cnt;
