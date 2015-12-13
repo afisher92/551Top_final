@@ -87,7 +87,7 @@ assign wrt_en = (wrt_ff && valid_rise);
 
 always @(posedge clk, negedge rst_n) begin
 	if(!rst_n)
-		wrt_ff <= 1'b1;
+		wrt_ff <= 1'b0;
 	else if(valid_rise)
 		wrt_ff <= ~wrt_ff;
 end

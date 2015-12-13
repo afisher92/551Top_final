@@ -89,26 +89,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	CS4272
 
-} {} {}} C:/Users/Nate/Desktop/551Top_final/EQ_Engine.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/EQ_Engine.sv
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module EQ_Engine
-
-Top level modules:
-	EQ_Engine
-
 } {} {}} C:/Users/Nate/Desktop/551Top_final/LPfilt.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/LPfilt.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module LPfilt
 
 Top level modules:
 	LPfilt
-
-} {} {}} C:/Users/Nate/Desktop/551Top_final/reset_synch.v {1 {vlog -work work -stats=none C:/Users/Nate/Desktop/551Top_final/reset_synch.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module reset_synch
-
-Top level modules:
-	reset_synch
 
 } {} {}} C:/Users/Nate/Desktop/551Top_final/B3filt.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/B3filt.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -117,6 +103,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	B3filt
 
+} {} {}} C:/Users/Nate/Desktop/551Top_final/reset_synch.v {1 {vlog -work work -stats=none C:/Users/Nate/Desktop/551Top_final/reset_synch.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module reset_synch
+
+Top level modules:
+	reset_synch
+
 } {} {}} C:/Users/Nate/Desktop/551Top_final/ROM_B1.v {1 {vlog -work work -stats=none C:/Users/Nate/Desktop/551Top_final/ROM_B1.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module ROM_B1
@@ -124,12 +117,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	ROM_B1
 
-} {} {}} C:/Users/Nate/Desktop/551Top_final/codec_intf.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/codec_intf.sv
+} {} {}} C:/Users/Nate/Desktop/551Top_final/ADC128S.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/ADC128S.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module codec_intf
+-- Compiling module ADC128S
 
 Top level modules:
-	codec_intf
+	ADC128S
 
 } {} {}} C:/Users/Nate/Desktop/551Top_final/ROM_B2.v {1 {vlog -work work -stats=none C:/Users/Nate/Desktop/551Top_final/ROM_B2.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -138,12 +131,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	ROM_B2
 
-} {} {}} C:/Users/Nate/Desktop/551Top_final/ADC128S.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/ADC128S.sv
+} {} {}} C:/Users/Nate/Desktop/551Top_final/codec_intf.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/codec_intf.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module ADC128S
+-- Compiling module codec_intf
 
 Top level modules:
-	ADC128S
+	codec_intf
 
 } {} {}} C:/Users/Nate/Desktop/551Top_final/ROM_B3.v {1 {vlog -work work -stats=none C:/Users/Nate/Desktop/551Top_final/ROM_B3.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -159,19 +152,19 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	slide_intf
 
-} {} {}} C:/Users/Nate/Desktop/551Top_final/ROM_HP.v {1 {vlog -work work -stats=none C:/Users/Nate/Desktop/551Top_final/ROM_HP.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module ROM_HP
-
-Top level modules:
-	ROM_HP
-
 } {} {}} C:/Users/Nate/Desktop/551Top_final/Equalizer.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/Equalizer.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module Equalizer
 
 Top level modules:
 	Equalizer
+
+} {} {}} C:/Users/Nate/Desktop/551Top_final/ROM_HP.v {1 {vlog -work work -stats=none C:/Users/Nate/Desktop/551Top_final/ROM_HP.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ROM_HP
+
+Top level modules:
+	ROM_HP
 
 } {} {}} C:/Users/Nate/Desktop/551Top_final/B2filt.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/B2filt.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -180,18 +173,18 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	B2filt
 
-} {} {}} C:/Users/Nate/Desktop/551Top_final/LED.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/LED.sv
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module LED
-
-Top level modules:
-	LED
-
 } {} {}} C:/Users/Nate/Desktop/551Top_final/bandScale.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/bandScale.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module bandScale
 
 Top level modules:
 	bandScale
+
+} {} {}} C:/Users/Nate/Desktop/551Top_final/LED.sv {1 {vlog -work work -sv -stats=none C:/Users/Nate/Desktop/551Top_final/LED.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module LED
+
+Top level modules:
+	LED
 
 } {} {}}

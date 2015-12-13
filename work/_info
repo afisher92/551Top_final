@@ -10,7 +10,7 @@ cModel Technology
 dC:/Modeltech_pe_edu_10.4a/examples
 vA2D_intf
 Z0 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z1 !s110 1449967662
+Z1 !s110 1450025849
 !i10b 1
 !s100 GlUS7d9@[o690mgDjKjZ92
 IJ;`85OTa_471jhPg57H6j2
@@ -26,7 +26,7 @@ Z4 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z5 !s108 1449967662.000000
+Z5 !s108 1450025848.000000
 !s107 C:/Users/Nate/Desktop/551Top_final/A2D_intf.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/A2D_intf.sv|
 !s101 -O0
@@ -51,7 +51,7 @@ R4
 r1
 !s85 0
 31
-R5
+Z8 !s108 1450025849.000000
 !s107 C:/Users/Nate/Desktop/551Top_final/ADC128S.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/ADC128S.sv|
 !s101 -O0
@@ -62,13 +62,13 @@ vB1filt
 R0
 R1
 !i10b 1
-!s100 3PaKnFJ?OfF^:O@h7NOL]2
-I5Lh04J[:UTJaL=@lY;M[Y1
+!s100 dXW7[`U9ZQ=ObR[kkoL:F2
+I]Xn6hHELNg3LZLcA^8fOY3
 R2
 !s105 B1filt_sv_unit
 S1
 R3
-w1449902000
+w1450021044
 8C:/Users/Nate/Desktop/551Top_final/B1filt.sv
 FC:/Users/Nate/Desktop/551Top_final/B1filt.sv
 L0 1
@@ -76,7 +76,7 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/B1filt.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/B1filt.sv|
 !s101 -O0
@@ -87,13 +87,13 @@ vB2filt
 R0
 R1
 !i10b 1
-!s100 ]U?gJ[Li>Z`?nCQ]TjW[m1
-IF26Bk>=kVUZP8bZZEF3042
+!s100 kKD9TR<<ZG0BU^AXPL<JP2
+IPFJ6gDeA^Q^e>NXciY;1V1
 R2
 !s105 B2filt_sv_unit
 S1
 R3
-w1449901996
+Z9 w1450021088
 8C:/Users/Nate/Desktop/551Top_final/B2filt.sv
 FC:/Users/Nate/Desktop/551Top_final/B2filt.sv
 L0 1
@@ -101,7 +101,7 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/B2filt.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/B2filt.sv|
 !s101 -O0
@@ -112,13 +112,13 @@ vB3filt
 R0
 R1
 !i10b 1
-!s100 mjkR5T5@3oz7Zm^7TcPkC0
-IXI_CKj5LdP6C@54:Z7jMG1
+!s100 j=@NV33aE@c<L38eG@6eJ1
+IUOh?2mkZ<lJ1GI3^f0l@a3
 R2
 !s105 B3filt_sv_unit
 S1
 R3
-w1449901989
+R9
 8C:/Users/Nate/Desktop/551Top_final/B3filt.sv
 FC:/Users/Nate/Desktop/551Top_final/B3filt.sv
 L0 1
@@ -126,7 +126,7 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/B3filt.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/B3filt.sv|
 !s101 -O0
@@ -151,7 +151,7 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/bandScale.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/bandScale.sv|
 !s101 -O0
@@ -173,15 +173,15 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/button_rise_edge.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Nate/Desktop/551Top_final/button_rise_edge.v|
 !s101 -O0
 !i113 1
-Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
 vcodec_intf
 R0
-!s110 1449979576
+R1
 !i10b 1
 !s100 :MChZDSW>0eQUCSQfmAZk2
 I=<ME51eEi0a`;:G6Bm_^81
@@ -197,7 +197,7 @@ R4
 r1
 !s85 0
 31
-!s108 1449979576.000000
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/codec_intf.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/codec_intf.sv|
 !s101 -O0
@@ -213,20 +213,20 @@ R3
 R7
 8C:/Users/Nate/Desktop/551Top_final/CS4272.v
 FC:/Users/Nate/Desktop/551Top_final/CS4272.v
-Z9 L0 11
+Z11 L0 11
 R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/CS4272.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Nate/Desktop/551Top_final/CS4272.v|
 !s101 -O0
 !i113 1
-R8
+R10
 n@c@s4272
 vdualPort1024x16
-Z10 !s110 1449967663
+R1
 !i10b 1
 !s100 kYgFML]4CYJ7V15LCTeTS0
 IEoLPTn>j7f]TjiS6l?Ng93
@@ -240,15 +240,15 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/dualPort1024x16.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Nate/Desktop/551Top_final/dualPort1024x16.v|
 !s101 -O0
 !i113 1
-R8
+R10
 ndual@port1024x16
 vdualPort1536x16
-R10
+R1
 !i10b 1
 !s100 bNYM:I_zX`>fij9`a9IO02
 I8JlQLSSD32<Xf]=lRSfN90
@@ -262,16 +262,16 @@ R4
 r1
 !s85 0
 31
-Z11 !s108 1449967663.000000
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/dualPort1536x16.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Nate/Desktop/551Top_final/dualPort1536x16.v|
 !s101 -O0
 !i113 1
-R8
+R10
 ndual@port1536x16
 vEQ_Engine
 R0
-!s110 1449970453
+R1
 !i10b 1
 !s100 NPlIGV`6Z^z]kIbnBel?73
 I?97HzSVfC24l:LK>7UUdA3
@@ -279,7 +279,7 @@ R2
 !s105 EQ_Engine_sv_unit
 S1
 R3
-w1449970446
+w1450025770
 8C:/Users/Nate/Desktop/551Top_final/EQ_Engine.sv
 FC:/Users/Nate/Desktop/551Top_final/EQ_Engine.sv
 L0 1
@@ -287,7 +287,7 @@ R4
 r1
 !s85 0
 31
-!s108 1449970453.000000
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/EQ_Engine.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/EQ_Engine.sv|
 !s101 -O0
@@ -296,7 +296,7 @@ R6
 n@e@q_@engine
 vEqualizer
 R0
-R10
+R1
 !i10b 1
 !s100 eBhRiHiS<fSfXk:JC4Nb]2
 I1bP47`YH>96<SeOF^57aU2
@@ -312,7 +312,7 @@ R4
 r1
 !s85 0
 31
-R11
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/Equalizer.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/Equalizer.sv|
 !s101 -O0
@@ -321,7 +321,7 @@ R6
 n@equalizer
 vEqualizer_tb
 R0
-R10
+R1
 !i10b 1
 !s100 RIcT64G919^XEhg1d8S4b1
 I8hU:<C;aaoV?AGTRETY>X2
@@ -337,7 +337,7 @@ R4
 r1
 !s85 0
 31
-R11
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/Equalizer_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/Equalizer_tb.sv|
 !s101 -O0
@@ -346,7 +346,7 @@ R6
 n@equalizer_tb
 vHiFQueues
 R0
-R10
+R1
 !i10b 1
 !s100 O0KNXZ9>EoY3@g5Kg=8zX2
 ImdC?=nM7><hN]R2z:ZV9Z2
@@ -362,7 +362,7 @@ R4
 r1
 !s85 0
 31
-R11
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/HiFQueues.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/HiFQueues.sv|
 !s101 -O0
@@ -371,15 +371,15 @@ R6
 n@hi@f@queues
 vHPfilt
 R0
-R10
+Z12 !s110 1450025850
 !i10b 1
-!s100 ?dLVd4<=C5;n06g3MFW^=0
-IMojgn]Q=bWPQES6i2nk]j2
+!s100 LdThc<kdadIH<lb<[8dTd3
+IQQFzk[23JLKG_5e9d:G1Z3
 R2
 !s105 HPfilt_sv_unit
 S1
 R3
-w1449902004
+R9
 8C:/Users/Nate/Desktop/551Top_final/HPfilt.sv
 FC:/Users/Nate/Desktop/551Top_final/HPfilt.sv
 L0 1
@@ -387,7 +387,7 @@ R4
 r1
 !s85 0
 31
-R11
+R8
 !s107 C:/Users/Nate/Desktop/551Top_final/HPfilt.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/HPfilt.sv|
 !s101 -O0
@@ -396,7 +396,7 @@ R6
 n@h@pfilt
 vLED
 R0
-R10
+R12
 !i10b 1
 !s100 UV>IDzkDS4Qgj9Y_zj88]2
 IHBfNeZ_?Hg;QSjGo?fSeV0
@@ -412,7 +412,7 @@ R4
 r1
 !s85 0
 31
-R11
+Z13 !s108 1450025850.000000
 !s107 C:/Users/Nate/Desktop/551Top_final/LED.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/LED.sv|
 !s101 -O0
@@ -421,15 +421,15 @@ R6
 n@l@e@d
 vLowFQueues
 R0
-!s110 1449979614
+!s110 1450025945
 !i10b 1
-!s100 2N]DoPjOz^E`ja^KN=6@60
-I5SSAl0I4M`ZScGo>Z6B8C3
+!s100 A3Knn9WaPCfgX2UBmj:iz2
+IC^cmG_f^`C^?8MnWfNCee3
 R2
 !s105 LowFQueues_sv_unit
 S1
 R3
-w1449979610
+w1450025943
 8C:/Users/Nate/Desktop/551Top_final/LowFQueues.sv
 FC:/Users/Nate/Desktop/551Top_final/LowFQueues.sv
 L0 1
@@ -437,7 +437,7 @@ R4
 r1
 !s85 0
 31
-!s108 1449979614.000000
+!s108 1450025945.000000
 !s107 C:/Users/Nate/Desktop/551Top_final/LowFQueues.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/LowFQueues.sv|
 !s101 -O0
@@ -446,15 +446,15 @@ R6
 n@low@f@queues
 vLPfilt
 R0
-R10
+R12
 !i10b 1
-!s100 EoYkC3Sn1><m3AAzM:koi0
-IQSTPhTA:^YhNXlD1]@dl?2
+!s100 =_HcmN=^KF[=d>FJjEITM2
+IVR8`zG:iGT16HAGLk>0W]1
 R2
 !s105 LPfilt_sv_unit
 S1
 R3
-w1449902009
+w1450021075
 8C:/Users/Nate/Desktop/551Top_final/LPfilt.sv
 FC:/Users/Nate/Desktop/551Top_final/LPfilt.sv
 L0 1
@@ -462,15 +462,40 @@ R4
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/Nate/Desktop/551Top_final/LPfilt.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/LPfilt.sv|
 !s101 -O0
 !i113 1
 R6
 n@l@pfilt
+vNewFQ
+R0
+!s110 1450024282
+!i10b 1
+!s100 4lbNSjmdQe4G<]KY=FJ_h0
+I;B?W^?n_jJXShDa?YjY_a2
+R2
+!s105 NewFQ_sv_unit
+S1
+R3
+w1450024269
+8C:/Users/Nate/Desktop/551Top_final/NewFQ.sv
+FC:/Users/Nate/Desktop/551Top_final/NewFQ.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1450024282.000000
+!s107 C:/Users/Nate/Desktop/551Top_final/NewFQ.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/NewFQ.sv|
+!s101 -O0
+!i113 1
+R6
+n@new@f@q
 vreset_synch
-R10
+R12
 !i10b 1
 !s100 Tgm?1NHbLoo0gIH[hiHbY3
 IAehUDcBh9Smzgl30H:6iP0
@@ -484,14 +509,14 @@ R4
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/Nate/Desktop/551Top_final/reset_synch.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Nate/Desktop/551Top_final/reset_synch.v|
 !s101 -O0
 !i113 1
-R8
-vROM_B1
 R10
+vROM_B1
+R12
 !i10b 1
 !s100 7kWZAPVWeiDHcgJNkM1]R2
 IX:7BL6c`bGicHdm63IZDE0
@@ -505,15 +530,15 @@ R4
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/Nate/Desktop/551Top_final/ROM_B1.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Nate/Desktop/551Top_final/ROM_B1.v|
 !s101 -O0
 !i113 1
-R8
+R10
 n@r@o@m_@b1
 vROM_B2
-R10
+R12
 !i10b 1
 !s100 49AVDUoT1i0bibAz<<>Je3
 Ii8>AkbN]CNAC6FX77DNVo1
@@ -527,15 +552,15 @@ R4
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/Nate/Desktop/551Top_final/ROM_B2.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Nate/Desktop/551Top_final/ROM_B2.v|
 !s101 -O0
 !i113 1
-R8
+R10
 n@r@o@m_@b2
 vROM_B3
-R10
+R12
 !i10b 1
 !s100 CIF_6E>Lk0nEFeB6V8B730
 I3mm;l6zZGMjk:MJRW_CFo2
@@ -549,15 +574,15 @@ R4
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/Nate/Desktop/551Top_final/ROM_B3.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Nate/Desktop/551Top_final/ROM_B3.v|
 !s101 -O0
 !i113 1
-R8
+R10
 n@r@o@m_@b3
 vROM_HP
-R10
+R12
 !i10b 1
 !s100 XG7O0ofO[Az;oITQ@V1>k2
 IM;TmgFaZiYVJbzEA_;e@S2
@@ -571,15 +596,15 @@ R4
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/Nate/Desktop/551Top_final/ROM_HP.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Nate/Desktop/551Top_final/ROM_HP.v|
 !s101 -O0
 !i113 1
-R8
+R10
 n@r@o@m_@h@p
 vROM_LP
-R10
+R12
 !i10b 1
 !s100 UPX2H1?LRoN05]00V8<^g0
 IJm_eNJ;RQdz@`2ZDWTcEA2
@@ -593,16 +618,16 @@ R4
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/Nate/Desktop/551Top_final/ROM_LP.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Nate/Desktop/551Top_final/ROM_LP.v|
 !s101 -O0
 !i113 1
-R8
+R10
 n@r@o@m_@l@p
 vslide_intf
 R0
-Z12 !s110 1449967664
+R12
 !i10b 1
 !s100 ^G]W0OLeok=5dVEU7;l?]2
 IMiiC3`l:H0HLClWOI:5jg2
@@ -618,7 +643,7 @@ R4
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/Nate/Desktop/551Top_final/slide_intf.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/slide_intf.sv|
 !s101 -O0
@@ -642,7 +667,7 @@ R4
 r1
 !s85 0
 31
-!s108 1449967664.000000
+R13
 !s107 C:/Users/Nate/Desktop/551Top_final/SPI_ADC128S.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Nate/Desktop/551Top_final/SPI_ADC128S.sv|
 !s101 -O0
@@ -651,7 +676,7 @@ R6
 n@s@p@i_@a@d@c128@s
 vSPI_mstr
 R0
-R1
+!s110 1450025848
 !i10b 1
 !s100 h:dG?Z]E7Li7V[COO6NKb0
 Ike>lVO<nQH;2XM@7T15?d0
@@ -662,7 +687,7 @@ R3
 w1449899352
 8C:/Users/Nate/Desktop/551Top_final/SPI_mstr.sv
 FC:/Users/Nate/Desktop/551Top_final/SPI_mstr.sv
-R9
+R11
 R4
 r1
 !s85 0

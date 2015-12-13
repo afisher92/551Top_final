@@ -2,7 +2,7 @@
 /// The amplitude of each component is 3200.  See if you can filter the band ///
 /// of your choice using your equalizer.  Left is generated using sine and ///
 /// right was generated using cosine, so they are not identical ///
-@0    0
+@0 1111
 @1 3e80
 @2  e19
 @3 3a3d
