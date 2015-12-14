@@ -111,15 +111,15 @@ always @(*) begin
 				nxt_state = IDLE;
 		end
 		SHIFT : begin
-			en_cnt = (&dec_cnt[4:1]) ? 1'b1 : 1'b0;
-			shft = (&dec_cnt[4:1]) ? 1'b1 : 1'b0;
+			en_cnt = (dec_cntr==5'b11110) ? 1'b1 : 1'b0;
+			shft = (dec_cntr==5'b11110) ? 1'b1 : 1'b0;
 			if (shft_cnt[4])
 				nxt_state = PORCH;
 			else
 				nxt_state = SHIFT;
 		end
 		PORCH : begin
-			if (&dec_cnt[4:3]) begin
+			if (dec_cntr==5'b11000) begin
 				nxt_state = IDLE;
 				set_done = 1'b1;
 			end
